@@ -61,11 +61,13 @@
 		<section>
 			<h2>Dataset Overview</h2>
 
-			<p> This dataset contains a sample of 49,300 residential sales transactiondata in the City of Boston for propperties sold between 2000 and 2023.
+			<p> This dataset contains a sample of 49,300 residential sales transactiondata in the City of Boston for propperties sold between 2000 and 2022.
 				Each of the datapoints has 63 variables describing qualities such as location, whether or property was flipped, the property type, price, and who the buyers and sellers were.
 				This data was acquired from a partner of the 6.C85 course, MAPC, who purchasede this data from The Warren Group, which includes all residential property transactions in the MAPC region from 2000 through 2024.
 				A property is considered to have been "flipped" if it has been sold within 2 years of its most recent purchase date, with a few exceptions such as sales by banks, or government related agencies and the home was foreclosed.
-				shape & structure of the dataset. What variables does the dataset contain? How are they distributed? Are there any notable data quality issues? Are there any surprising relationships among the variables? Make sure to also perform “gut checks” for patterns you expect to see!</p>
+				We begin our data exploration by studying individual variables, their distributions, and addressing data quality issues. 
+				As we continue to explore the data we take a look at multivariate plots and their relationship to our questions.
+			</p>
 		</section>
 
 		<section>
@@ -74,9 +76,16 @@
 
 
 			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="SalesByYear.png" alt="" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				We first look at our data set overall to see if we notice any major patterns. 
+				This chart shows the number of residential sales transactions that occurred for each year between 2000 and 2022. 
+				We observe that there is a slight peak in sales transactions in 2004 with some higher sales in the years surrounding it, however outside of this peak, the sales transactions seem to fluctuate pretty arbitrarily around 2000 transactions per year.
+				This peak likely exists due to the low interests rates, variety of loans available, and buying frenzy due to the low rates. 
+				However, this bubble eventually burst in 2008 which caused interest rates to increase and the total sales transactions went down.
+				We do notice there are particularly low sales transactions in 2009 and 2020. This is likely due to the economic recessions in the US during those years.
+				In 2008 the economic recession was caused by the burst of the housing bubble which likely made people less willing to buy houses and therefore resulted in fewer transactions in 2009.
+				In 2019, the COVID-19 pandemic broke out and caused many people to lose stable sources of income and overall spend less. As a result, people were less likely to buy properties due to a lack of spendable money in the economy.
 				</figcaption>
 			</figure>
 
