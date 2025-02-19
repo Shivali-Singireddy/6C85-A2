@@ -112,7 +112,7 @@
 			<figure>
 				<img src="YearBuiltNew.png" alt="" style="max-width: 100%; height: auto;" />
 				<figcaption>
-					After removing the problematic values, the distribution for the "Year Built" now appears less extreme and takes on a more bell-shaped curve.
+					After removing the problematic values, the distribution for the number of houses in each "Year Built" now appears less extreme and takes on a more bell-shaped curve.
 
 					There are not many significant gaps between the bars, which gives it a somewhat smooth, continuous appearance. 
 					However, we do observe that the higher bars tend to appear at regular 5-year intervals, indicating that property owners may have rounded the year the house was built to the nearest multiple of 5.
@@ -152,6 +152,8 @@
 				<figcaption>
 					In this graph, we build on our previous analysis by taking a deeper dive into the different types of institutions and large buyers.
 
+					On the y-axis, we plot the total number of transactions for each type of buyer.
+
 					At a glance, we observe that LLCs have the widest range on the y-axis, indicating that they represent the largest group among these buyer types. Prior to 2008, businesses were the primary investors in these transactions. From 2007 to 2010, banks were more active in property acquisitions, likely due to the 2008 housing crisis, during which banks had to take possession of properties in place of defaulted loans.
 					
 					In 2012, there is a noticeable increase in purchases by government-backed entities such as Freddie Mac, Fannie Mae, and other government organizations. This makes sense, as the government took control of these institutions to mitigate the financial crisis, resulting in a surge of property acquisitions by these entities.
@@ -168,7 +170,10 @@
 				<figcaption>
 					To gain a better understanding of the factors contributing to property flips in the past five years, I plotted the flip index (which indicates whether or not a property was flipped) against several other variables. I also focused on data from just the last five years to capture recent trends in property flipping.
 
-					In the graph above, we examine the flip index in relation to property style. From this visualization, we can see that while high-rise properties had the highest overall sales volume, mid-rise properties were more likely to be flipped. Additionally, row-middle properties had a higher proportion of flips relative to other property types, despite having similar transaction volumes.
+					In the graph above, we examine the flip index in relation to property style. 
+					The left side of the visualization graphs the total number of properties sold in the past 5 years for each style.
+					The right side of the visualization graphs the total number of flips for each property type in the past 5 years for each style.
+					From this visualization, we can see that while high-rise properties had the highest overall sales volume, mid-rise properties were more likely to be flipped. Additionally, row-middle properties had a higher proportion of flips relative to other property types, despite having similar transaction volumes.
 					
 					Although the number of flips for high-rise properties is also notable, the high sales volume of these properties suggests that the likelihood of being flipped is not as pronounced for this property style.
 					
@@ -181,7 +186,10 @@
 				<figcaption>
 					This visualization aims to address our third question: whether there is an association between the price difference and the identities of buyers and sellers in property flips. For this analysis, I focused only on properties classified as flips.
 
-					The first column in the graph represents the seller type, while the second column represents the buyer type. We observe that for small, medium, and non-value investor sellers, the price difference typically averages around one million dollars, with some outliers showing negative values. In contrast, when large and institutional sellers are involved, the average price difference is significantly higher.
+					The first column in the graph represents the seller type, while the second column represents the buyer type. 
+					The bars on the plot represent a transaction between the sellers and buyers of certain types, with the x-axis representing the difference in price for each of the transactions plotted.
+					
+					We observe that for small, medium, and non-value investor sellers, the price difference typically averages around one million dollars, with some outliers showing negative values. In contrast, when large and institutional sellers are involved, the average price difference is significantly higher.
 					
 					An interesting pattern emerges when we look at the buyer types: sellers of the same type often sell to buyers of the same type, or to non-value investors.
 					
@@ -202,9 +210,13 @@
 			<figure>
 				<img src="FlippedRegion.png" alt="" style="max-width: 100%; height: auto;" />
 				<figcaption>
-					We continue our analysis to identify the factors that might contribute to certain properties being flipped. To explore this, we examine the distribution of flipped properties across different residential areas by zipcode, which helps us address our fourth guiding question.
+					We continue our analysis to identify the factors that might contribute to certain properties being flipped. 
+					
+					To explore this, we examine the distribution of flipped properties across different residential areas by zipcode, which helps us address our fourth guiding question.
 
-					In the map, we visualize the total number of flipped houses in each region. From this map, we can observe a concentration of flipped properties near Boston. The zipcode with the highest number of flips is 02116, located in the Back Bay, followed closely by 02118 in the South End.
+					In the map, we visualize the total number of flipped houses in each region, with a darker blue representing more houses which were flipped under a particular zipcode. 
+					
+					From this map, we can observe a concentration of flipped properties near Boston. The zipcode with the highest number of flips is 02116, located in the Back Bay, followed closely by 02118 in the South End.
 					
 					This suggests that these specific zip codes are likely key factors contributing to the occurrence of property flips. A logical follow-up question would be to investigate whether this trend holds true if we focus solely on the past five years.</figcaption>
 			</figure>
