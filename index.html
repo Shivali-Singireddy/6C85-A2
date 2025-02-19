@@ -103,6 +103,28 @@
 			</figure>
 
 			<figure>
+				<img src="YearBuilt.png" alt="" style="max-width: 100%; height: auto;" />
+				<figcaption>
+				While plotting the different variables, one variable that I noticed had an interesting distribution was the year in which the house was built. 
+				Some of the houses had the value 0 for the year which it was built.
+				This does not make sense as there were no houses built in the US in the year 0 which still exist today.
+				I assume that these houses just had an unknown date for the year built.
+				Since these houses only constitute around 1,000 of our 49,000 datapoints, I decided to drop them from analysis to conduct a cleaner preliminary analysis.
+				In future explorations of this dataset, it would be worth considering replacing 0 with either an average value of all the remaining datapoints or adding a value for the year built based on the k-nearest neighbors.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="YearBuiltNew.png" alt="" style="max-width: 100%; height: auto;" />
+				<figcaption>
+				Once we remove these values, we get this new distribution for the Year Built which no longer looks as extreme and loooks more bell-shaped.
+				One interesting aspect of this graph is that it seems bell-shaped with little gaps in between each of the bars. 
+				If we look closely, we notice that the high parts of the bars are at every 5 years, which suggests that the property owners might have likely rounded the year the house was built to the closest multiple of 5.
+				Similarly, there is also a huge peak at 1900 which suggests that a lot of property owners might have also rounded to the closest century.
+				</figcaption>
+			</figure>
+
+			<figure>
 				<img src="AllBuyer.png" alt="" style="max-width: 100%; height: auto;" />
 				<figcaption>
 				This graph looks into the distribution of buyer type by year in order to answer our first question. 
@@ -117,24 +139,19 @@
 				<figcaption>
 				This graph looks into answering the previous follow up question with a closer look into the institutional and large buyers purchasing patterns.
 				From this graph, we can see that there is indeed a sharp increase in the purchase value of the transactions of instutions in the year 2019. 
-				This is the same year which the pandemic occured in, so there might be some correlation in people having to leave their apartments because they are unable to afford them, similar to Titus in Mousbe in "When Private Equity Becomes Your Landlord" article.
+				This is the same year which the pandemic occured in, so there might be some correlation in people having to leave their apartments because they are unable to afford them, similar to Titus and Mousbe in the "When Private Equity Becomes Your Landlord" article.
 				This could have allowed larger institutions to buy these apartments at a lower price than before, whereas regular individuals no longer had the salary to afford these purchases.
+				This could then lead to flipping the prices of these properties since they were bought at a low price, but once people received stable income they could start purchasing these properties again.
 				We also notice a slight upward increase in the purchase value of large investors, while the total value of purchases fluctuates around the same number.
 				This suggests that more and more of the purchases are from large buyers and institutions as opposed to other types of buyers which are slowly decreasing.
+				We can further break this down an analyze the buyer types within the large buyers and institutions
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="BuyerTrans.png" alt="" style="max-width: 100%; height: auto;" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
-				</figcaption>
-			</figure>
-
-			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
-				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				In this graph, we follow up our previous analysis and do a deeper dive into the different types of institutions and large buyers. 
 				</figcaption>
 			</figure>
 
