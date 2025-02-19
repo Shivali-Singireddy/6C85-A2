@@ -78,167 +78,160 @@
 			<figure>
 				<img src="SalesByYear.png" alt="" style="max-width: 100%; height: auto;" />
 				<figcaption>
-				We first look at our data set overall to see if we notice any major patterns. 
-				This chart shows the number of residential sales transactions that occurred for each year between 2000 and 2022. 
-				We observe that there is a slight peak in sales transactions in 2004 with some higher sales in the years surrounding it, however outside of this peak, the sales transactions seem to fluctuate pretty arbitrarily around 2000 transactions per year.
-				This peak likely exists due to the low interests rates, variety of loans available, and buying frenzy due to the low rates during that year. 
-				However, this bubble eventually burst in 2008 which caused interest rates to increase and the total sales transactions went down.
-				We do notice there are particularly low sales transactions in 2009 and 2020. This is likely due to the economic recessions in the US during those years.
-				In 2008 the economic recession was caused by the burst of the housing bubble which likely made people less willing to buy houses and therefore resulted in fewer transactions in 2009.
-				In 2019, the COVID-19 pandemic broke out and caused many people to lose stable sources of income and overall spend less. As a result, people were less likely to buy properties due to a lack of spendable money in the economy.
-				</figcaption>
+					We begin by examining the overall dataset to identify any significant patterns. The chart displays the number of residential sales transactions that occurred each year from 2000 to 2022.
+
+					One noticeable trend is a slight peak in sales transactions in 2004, with some higher transaction volumes in the surrounding years. However, aside from this peak, the number of transactions appears to fluctuate relatively unpredictably, averaging around 2,000 transactions per year.
+					
+					This peak can likely be attributed to the combination of low interest rates, a variety of loan options, and a buying frenzy driven by these favorable conditions in 2004. However, this housing market bubble burst in 2008, leading to a rise in interest rates and a subsequent decline in transaction volumes.
+					
+					We also observe particularly low transaction volumes in 2009 and 2020, which can be linked to the economic recessions in the United States during those years. The 2008 recession, triggered by the collapse of the housing bubble, reduced buyer confidence, resulting in fewer transactions in 2009. Similarly, the economic impact of the COVID-19 pandemic in 2020 caused many people to lose stable income sources, leading to reduced spending and, consequently, fewer property purchases.
+					
+					</figcaption>
 			</figure>
 
 			<figure>
 				<img src="FlippedByYear.png" alt="" style="max-width: 100%; height: auto;" />
 				<figcaption>
-				Since whether or not a transaction was flipped is a crucial measure in a lot of our analysis questions, we next look at if there is a relation between the year and how mnay transactions were flipped.
-				From the graph above, we observe that the number of flipped transactions increases dramatically starting in 2010.
-				It goes from essentially no flipped transactions to 180 flipped transactions by 2014.
-				This continues in a sharp increase until 2014, after which the number of flipped transactions appears to go down slightly to around 100-110 transactions.
-				This mankes sense that a lot of transactions which were flipped occured in 2010 because of the Housing crisis of 2008. 
-				Many people could not afford the mortgage loan and as a result had to sell their accomodation at a low price.
-				By 2014 the housing market had somewhat recovered from the housing crisis, which is why the flipped transaction numbers started to go down again.
-				</figcaption>
+					Since the distinction between flipped and non-flipped transactions is a key factor in much of our analysis, we next examine the relationship between the year and the number of transactions that were flipped. From the graph above, we can observe a significant increase in flipped transactions starting in 2010. The number rises from almost none to approximately 180 flipped transactions by 2014. This sharp increase continues until 2014, after which the number of flipped transactions begins to decline slightly, settling around 100-110 transactions.
+
+					This trend aligns with the aftermath of the 2008 housing crisis, during which many homeowners were unable to afford their mortgage payments and were forced to sell their properties at lower prices. By 2014, as the housing market began to recover, the frequency of flipped transactions started to decrease.</figcaption>
 			</figure>
 
 			<figure>
 				<img src="YearBuilt.png" alt="" style="max-width: 100%; height: auto;" />
 				<figcaption>
-				While plotting the different variables, one variable that I noticed had an interesting distribution was the year in which the house was built. 
-				Some of the houses had the value 0 for the year which it was built.
-				This does not make sense as there were no houses built in the US in the year 0 which still exist today.
-				I assume that these houses just had an unknown date for the year built.
-				Since these houses only constitute around 1,000 of our 49,000 datapoints, I decided to drop them from analysis to conduct a cleaner preliminary analysis.
-				In future explorations of this dataset, it would be worth considering replacing 0 with either an average value of all the remaining datapoints or adding a value for the year built based on the k-nearest neighbors.
-				</figcaption>
+					While exploring the various variables, I noticed that the year a house was built had an unusual distribution. Some houses had a value of "0" for the year they were constructed. This is problematic, as it’s unrealistic for any house built in the U.S. to have been constructed in the year 0.
+
+					I assume these entries represent unknown or missing data for the year built. Given that these houses account for only around 1,000 out of the 49,000 data points, I decided to exclude them from the analysis to ensure a cleaner preliminary dataset.
+					
+					In future analyses, it may be worth considering replacing the "0" values with a more meaningful estimate, such as the average year built for the remaining houses, or using a technique like k-nearest neighbors to impute a more accurate year for each missing value.
+					
+					</figcaption>
 			</figure>
 
 			<figure>
 				<img src="YearBuiltNew.png" alt="" style="max-width: 100%; height: auto;" />
 				<figcaption>
-				Once we remove these values, we get this new distribution for the Year Built which no longer looks as extreme and loooks more bell-shaped.
-				One interesting aspect of this graph is that it seems bell-shaped with little gaps in between each of the bars. 
-				If we look closely, we notice that the high parts of the bars are at every 5 years, which suggests that the property owners might have likely rounded the year the house was built to the closest multiple of 5.
-				Similarly, there is also a huge peak at 1900 which suggests that a lot of property owners might have also rounded to the closest century.
-				</figcaption>
+					After removing the problematic values, the distribution for the "Year Built" now appears less extreme and takes on a more bell-shaped curve.
+
+					There are not many significant gaps between the bars, which gives it a somewhat smooth, continuous appearance. 
+					However, we do observe that the higher bars tend to appear at regular 5-year intervals, indicating that property owners may have rounded the year the house was built to the nearest multiple of 5.
+					
+					Additionally, there is a sharp peak around the year 1900, suggesting that many property owners likely rounded the construction year to the nearest century.</figcaption>
 			</figure>
 
 			<figure>
 				<img src="AllBuyer.png" alt="" style="max-width: 100%; height: auto;" />
 				<figcaption>
-				This graph looks into the distribution of buyer type by year in order to answer our first question. 
-				From this graph we can see that the buyers who are purchasing the greatest total value of houses are characterized primarily as non-value investors as seen by the turquoise green blue coloring.
-				However, this does not mean that institutional or large investors are not increasing the amount of properties they are buying.
-				This brings us to a follow up question of whether the number of properties the bought by instutions and large investors are increasing.
+					This graph examines the distribution of buyer types by year to address our first question.
+
+					From the graph, we can observe that the buyers responsible for purchasing the highest total value of properties are predominantly non-value investors, as indicated by the turquoise green-blue color.
+					
+					However, this doesn't suggest that institutional or large investors aren't also increasing their property acquisitions. This raises a follow-up question: Are the number of properties being bought by institutions and large investors on the rise?
 				</figcaption>
 			</figure>
 
 			<figure>
 				<img src="BuyerType.png" alt="" style="max-width: 100%; height: auto;" />
 				<figcaption>
-				This graph looks into answering the previous follow up question with a closer look into the institutional and large buyers purchasing patterns.
-				From this graph, we can see that there is indeed a sharp increase in the purchase value of the transactions of instutions in the year 2019. 
-				This is the same year which the pandemic occured in, so there might be some correlation in people having to leave their apartments because they are unable to afford them, similar to Titus and Mousbe in the "When Private Equity Becomes Your Landlord" article.
-				This could have allowed larger institutions to buy these apartments at a lower price than before, whereas regular individuals no longer had the salary to afford these purchases.
-				This could then lead to flipping the prices of these properties since they were bought at a low price, but once people received stable income they could start purchasing these properties again.
-				We also notice a slight upward increase in the purchase value of large investors, while the total value of purchases fluctuates around the same number.
-				This suggests that more and more of the purchases are from large buyers and institutions as opposed to other types of buyers which are slowly decreasing.
-				We can further break this down an analyze the buyer types within the large buyers and institutions
+					This graph aims to address the follow-up question by examining the purchasing patterns of institutional and large buyers more closely.
+
+					From the graph, we observe a significant spike in the purchase value of transactions made by institutions in 2019. This aligns with the onset of the pandemic, and there may be a correlation between individuals being forced to vacate their apartments due to financial hardship, as discussed in the article When Private Equity Becomes Your Landlord by Titus and Mousbe.
+					
+					During this time, larger institutions may have been able to acquire these properties at lower prices, as many individuals were no longer able to afford them. This, in turn, could have led to a process of flipping these properties—purchasing them at a discount during a period of economic uncertainty, then reselling them once the market recovered and individuals regained stable income.
+					
+					We also notice a modest upward trend in the purchase value from large investors, while the total purchase value fluctuates around a consistent level. This suggests that institutional and large buyers are increasingly responsible for property purchases, while other buyer types are slowly decreasing in activity.
+					
+					To gain deeper insights, we can further break down and analyze the buyer types within the large buyer and institutional categories.
+					
 				</figcaption>
 			</figure>
 
 			<figure>
 				<img src="BuyerTrans.png" alt="" style="max-width: 100%; height: auto;" />
 				<figcaption>
-				In this graph, we follow up our previous analysis and do a deeper dive into the different types of institutions and large buyers.
-				Taking an overall look at this graph, we notice that the y-axis for LLCs has the largest range, which suggests that LLCs tend to be the largest out the types of buyers.
-				What we notice in the graph is that out of these types of buyers, before 2008, businesses tended to invest more in these transactions.
-				From 2007 to 2010, banks invested more in properties, which makes sense given the 2008 housing crisis and banks having to acquire the property in place of loans.
-				In 2012, Freddie Mac, Fannie Mae, and government entities bought more properties proportionally than in the surrounding years.
-				This makes sense given that the government took over these companies to prevent the spread of the financial crisis.
-				As a result, both moved together to buy properties around the same time.
-				After 2012, LLCs started buying up more properties proportionally compared to other types of buyers. 
-				This number was especially high in 2019 when the pandemic occured, which suggests that this is the buyer group who tends to flip houses.
-				This might be one factor which can help answer our second analysis question regarding what factors contribute to the property being flipped in the last five years.
+					In this graph, we build on our previous analysis by taking a deeper dive into the different types of institutions and large buyers.
+
+					At a glance, we observe that LLCs have the widest range on the y-axis, indicating that they represent the largest group among these buyer types. Prior to 2008, businesses were the primary investors in these transactions. From 2007 to 2010, banks were more active in property acquisitions, likely due to the 2008 housing crisis, during which banks had to take possession of properties in place of defaulted loans.
+					
+					In 2012, there is a noticeable increase in purchases by government-backed entities such as Freddie Mac, Fannie Mae, and other government organizations. This makes sense, as the government took control of these institutions to mitigate the financial crisis, resulting in a surge of property acquisitions by these entities.
+					
+					After 2012, LLCs began to acquire a larger proportion of properties compared to other buyer types, with a particularly sharp rise in 2019 during the pandemic. This suggests that LLCs may be the primary buyer group responsible for flipping properties.
+					
+					This trend could be one factor contributing to our second analysis question: What factors have influenced the increase in property flipping over the past five years?
+				
 				</figcaption>
 			</figure>
 
 			<figure>
 				<img src="HouseStyle.png" alt="" style="max-width: 100%; height: auto;" />
 				<figcaption>
-				To better understand what other factors might contribute to a property being flipped in the last five years, I plotted the flip index (which represents whether or not the property was flipped) by multiple other variables.
-				I also conditioned on only the past five years of data to see what the recent trends in flipping houses were.
-				In the graph above, we can see the flipped index with respect to the style of the property. From this graph, we can observe that while the number of properties sold was highest for high-rise properties,
-				the properties that were flipped tended to be more mid-rise.
-				In addition, row-middle properties seemed to have proportionally more properties which were flipped compared to other types of houses which had similar distributions to it in terms of number of transactions of this type of property.
-				While the number of flips for high-rise properties is also high compared to other styles, the number of properties of this type which were sold is also high, so it is likely that this is not an indicator for how likely it is to be flipped.
-				Overall, from this visualization we can see that properties with the mid-rise and row-middle style tend to be the type of properties which are flipped the most.
-				A follow up question to this would be whether combining this factor with other factors can give us more insight into what types of properties are targeted for flips.
-				A follow-up analysis to this question is conducted in Figure 11.
+					To gain a better understanding of the factors contributing to property flips in the past five years, I plotted the flip index (which indicates whether or not a property was flipped) against several other variables. I also focused on data from just the last five years to capture recent trends in property flipping.
+
+					In the graph above, we examine the flip index in relation to property style. From this visualization, we can see that while high-rise properties had the highest overall sales volume, mid-rise properties were more likely to be flipped. Additionally, row-middle properties had a higher proportion of flips relative to other property types, despite having similar transaction volumes.
+					
+					Although the number of flips for high-rise properties is also notable, the high sales volume of these properties suggests that the likelihood of being flipped is not as pronounced for this property style.
+					
+					Overall, the data indicates that mid-rise and row-middle properties are the most frequently flipped types. A logical follow-up question would be whether combining this factor with other variables can provide deeper insights into the types of properties most targeted for flips. This follow-up analysis is further explored in Figure 11.
 				</figcaption>
 			</figure>
 
 			<figure>
 				<img src="PriceDiffInv.png" alt="" style="max-width: 100%; height: auto;" />
 				<figcaption>
-				This visualization attempts to answer our third question about whether there is an association between the difference in price and who the buyers and sellers are in a flip.
-				For the graph, I conditioned on the house being classified as a flip.
-				The first column represents the type of seller and the second column represents the type of buyer.
-				We can see that for small, medium, and non-value investors who are sellers, the price difference tends to average around a million with some outliers in the negatives.
-				On the flip side, we see that with large and institutional sellers, the average price difference is significantly higher.
-				We also notice that sellers of the same type tend to sell to buyers of the same type or non-value investors, which is interesting to consider.
-				Finally, we also notice that there seems to be a major outlier in an institutional to institutional sale with a price difference of around 83 million dollars. 
-				Whether or not this is the actual number or it was misrepresented, it would be interesting to look into the specfic parties involved in this sale and why it might have been so high.
-				As a follow-up analysis, I would be interested to see if these sales of flips change if we are only considering the last 5 years, similar to question 2.
+					This visualization aims to address our third question: whether there is an association between the price difference and the identities of buyers and sellers in property flips. For this analysis, I focused only on properties classified as flips.
+
+					The first column in the graph represents the seller type, while the second column represents the buyer type. We observe that for small, medium, and non-value investor sellers, the price difference typically averages around one million dollars, with some outliers showing negative values. In contrast, when large and institutional sellers are involved, the average price difference is significantly higher.
+					
+					An interesting pattern emerges when we look at the buyer types: sellers of the same type often sell to buyers of the same type, or to non-value investors.
+					
+					Additionally, there is a notable outlier in the institutional-to-institutional category, with a price difference of approximately 83 million dollars. Whether this figure is accurate or misrepresented warrants further investigation, as it would be valuable to explore the specific parties involved in this transaction and understand why the price difference was so exceptionally high.
+					
+					As a follow-up, it would be insightful to examine whether the dynamics of flip sales change when we focus solely on transactions from the last five years, similar to the analysis conducted for question 2.					
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="PriceDiffInv.png" alt="" style="max-width: 100%; height: auto;" />
+				<img src="PriceDiff5Year.png" alt="" style="max-width: 100%; height: auto;" />
 				<figcaption>
-				This visualization answers our follow-up question, and we can see that when conditioning on only the past 5 years, there is only one transaction between one large corporation to another which is flipped.
-				All of the other flipped properties were sales between non-value investors. 
-				From this analysis, we can gather that most of the flipped properties in recent years are occuring through sales between two non-value investors.
-				The difference in price for these flips also does not seem to be as great as the price difference for the flips in the years before that.
-				</figcaption>
+					This visualization addresses our follow-up question. When focusing solely on the past five years, we observe that only one flipped property transaction occurred between two large corporations. All other flipped properties were sold between non-value investors.
+
+					From this analysis, we can conclude that the majority of flipped properties in recent years have involved transactions between two non-value investors. Additionally, the price difference for these recent flips appears to be smaller compared to those from earlier years.</figcaption>
 			</figure>
 
 			<figure>
 				<img src="FlippedRegion.png" alt="" style="max-width: 100%; height: auto;" />
 				<figcaption>
-				We continue our analysis of trying to determine what factors might cause certain properties to be flipped.
-				To answer this question, we can look into the residential areas and see how their flipped region varies by zipcode, which will help us answer our fourth guiding question.
-				In the map, we graph the total number of flipped houses in each region.
-				From this map, we can see that the houses which were flipped appear to be in a concentrated region near Boston.
-				The zipcode with the highest flips is 02116 which is the Back Bay. It is followed closely by 02118 which is the South End.
-				This shows us that these zipcodes are most likely to be a factor that contributes to a property flip. 
-				A follow up question to this is to see if this pattern still holds if we only look at the past 5 years.
-				</figcaption>
+					We continue our analysis to identify the factors that might contribute to certain properties being flipped. To explore this, we examine the distribution of flipped properties across different residential areas by zipcode, which helps us address our fourth guiding question.
+
+					In the map, we visualize the total number of flipped houses in each region. From this map, we can observe a concentration of flipped properties near Boston. The zipcode with the highest number of flips is 02116, located in the Back Bay, followed closely by 02118 in the South End.
+					
+					This suggests that these specific zip codes are likely key factors contributing to the occurrence of property flips. A logical follow-up question would be to investigate whether this trend holds true if we focus solely on the past five years.</figcaption>
 			</figure>
 
 			<figure>
 				<img src="AvgFlip5Year.png" alt="" style="max-width: 100%; height: auto;" />
 				<figcaption>
-				We answer our follow up quesion by conditioning on only the past 5 years.
-				When doing this, we get similar distribution to the previous map.
-				A follow up for this question is whether or not the proportion of houses flipped highlights different regions that the total number of houses flipped.
-				This is important because there might be a region with fewer transactions, so even though most of the transactions are flips, there are only very few of them which are covered up by a region which is constantly undergoing property transactions.
-				Plotting the average proportion of flips for each region, we notice that the region with the greatest proportion of flips is 02115 which includes Back Bay, Fenway, and Mission Hill.
-				The zipcode 02116 for Back Bay is second in proportion for number of flips.
-				This shows us that proportionatly, these two regions have a greater number of transactions which result in flips.
-				From the previous analysis in Figure 8, we noticed that the style of housing is also a major factor which could impact whether to property is flipped.
-				A follow up question using both of these figure would be whether there is a correspondence with these two factors and if they can further pinpoint properties which are likely to be flipped
-				</figcaption>
+					We address our follow-up question by focusing only on data from the past five years. The distribution we observe is similar to that of the previous map.
+
+					A key follow-up question is whether the proportion of houses flipped highlights different regions compared to the total number of flips. This distinction is important because a region with fewer total transactions might have a high proportion of flips, but the actual number of flipped properties could be small and obscured by regions with more frequent transactions.
+					
+					By plotting the average proportion of flips for each region, we find that the region with the highest proportion of flips is 02115, which includes Back Bay, Fenway, and Mission Hill. The zipcode 02116, representing Back Bay, ranks second in terms of flip proportions.
+					
+					This suggests that, proportionally, these two areas experience a higher percentage of property flips. From the analysis in Figure 8, we also observed that housing style is a significant factor influencing whether a property is flipped.
+					
+					A follow-up question, combining insights from both figures, would be whether there is a correlation between these two factors, and if they can help identify properties that are more likely to be flipped.
+					
+					</figcaption>
 			</figure>
 
 			<figure>
 				<img src="RegStyle.png" alt="" style="max-width: 100%; height: auto;" />
 				<figcaption>
-				When deciding which styles to compare to, we chose the three main styles which had flips and stuck out in the past 5 years.
-				From Figure 8, we know that these styles are High-Rise, Mid-Rise, and Row-Middle.
-				From this graph, we can see that the Row-Middle style houses have the most likelihood of being flipped, since the most amount of flips occured under the graph for this style.
-				Specifically, these flipes occured in the zipcode which was 02116, or Back Bay, followed closely by 02118, or South End. 
+					When selecting the property styles for comparison, we focused on the three main styles that have shown significant flipping activity over the past five years: High-Rise, Mid-Rise, and Row-Middle, as identified in Figure 8.
+
+					From the graph, it is clear that Row-Middle style houses have the highest likelihood of being flipped, as this style shows the greatest number of flips. Specifically, these flips are concentrated in the 02116 zipcode (Back Bay), followed closely by 02118 (South End).
+					
 				</figcaption>
 			</figure>
 		</section>
